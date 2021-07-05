@@ -26,6 +26,12 @@
                     department_id [hidden]
                  -->
 
+              <!-- profile image -->
+              <div class="form-group">
+                <label>Profile image</label>
+                <input type="file" class="form-control" placeholder="Profile image" />
+              </div>
+
               <!-- partner name -->
               <div class="form-group">
                 <label>Your name</label>
@@ -69,28 +75,33 @@
                 <input type="text" class="form-control" placeholder="Marital status" />
               </div>
 
+
+              <h4>Languages</h4>
               <!-- Languages -->
-              <div class="form-group">
-                <label>Languages</label>
-                <textarea type="text" class="form-control" placeholder="Languages"></textarea>
+              <div class="form-row">
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Languages" />
+                </div>
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Level" />
+                </div>
               </div>
 
               <!-- job_id (filled automatically) -->
               <div class="form-group">
-                <input type="text" class="form-control" />
+                <input type="hidden" class="form-control" />
               </div>
 
               <!-- department_id (filled automatically) -->
               <div class="form-group">
-                <input type="text" class="form-control" />
+                <input type="hidden" class="form-control" />
               </div>
 
+              <h4>Additional courses</h4>
               <!-- Resume -->
               <div class="form-group">
-                <label>Resume</label>
-                <input type="file" class="form-control" placeholder="Resume" />
+                <textarea type="text" class="form-control" placeholder="Courses"></textarea>
               </div>
-
 
             </div>
 
@@ -100,34 +111,33 @@
 
               <!-- Organization -->
               <div class="form-group">
-                <label>Your name</label>
-                <input type="text" class="form-control" placeholder="Your name" />
+                <label>Organization</label>
+                <input type="text" class="form-control" placeholder="Organization" />
               </div>
 
-              <!-- Organization -->
+              <!-- Position -->
               <div class="form-group">
-                <label>Your name</label>
-                <input type="text" class="form-control" placeholder="Your name" />
+                <label>Position</label>
+                <input type="text" class="form-control" placeholder="Position" />
               </div>
 
-              <!-- Organization -->
+              <!-- Start date -->
               <div class="form-group">
-                <label>Your name</label>
-                <input type="text" class="form-control" placeholder="Your name" />
+                <label>Start date</label>
+                <input type="date" class="form-control" placeholder="start date" />
               </div>
 
-              <!-- Organization -->
+              <!-- End date -->
               <div class="form-group">
-                <label>Your name</label>
-                <input type="text" class="form-control" placeholder="Your name" />
+                <label>End date</label>
+                <input type="date" class="form-control" placeholder="end date" />
               </div>
 
-              <!-- Organization -->
-              <div class="form-group">
-                <label>Your name</label>
-                <input type="text" class="form-control" placeholder="Your name" />
+              <!-- Currently working -->
+              <div class="form-check">
+                <input type="checkbox" class="form-check-input" id="curentlyWorkingStatus" />
+                <label class="form-check-label" for="curentlyWorkingStatus">Currently working</label>
               </div>
-
 
               <h3>Education</h3>
 
@@ -146,28 +156,29 @@
               <!-- Start date -->
               <div class="form-group">
                 <label>Start date</label>
-                <input type="text" class="form-control" placeholder="Start date" />
+                <input type="date" class="form-control" placeholder="Start date" />
               </div>
 
               <!-- End date -->
               <div class="form-group">
                 <label>End date</label>
-                <input type="text" class="form-control" placeholder="End date" />
+                <input type="date" class="form-control" placeholder="End date" />
               </div>
 
 
-              <h3>Skills</h3>
+              <h4>Skills</h4>
 
-              <!-- Skill -->
-              <div class="form-group">
-                <label>Skill</label>
-                <input type="text" class="form-control" placeholder="Skill" />
-              </div>
+              <div class="form-row">
+                <!-- Skill -->
 
-              <!-- Level -->
-              <div class="form-group">
-                <label>Level</label>
-                <input type="text" class="form-control" placeholder="Level" />
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Skill" />
+                </div>
+
+                <!-- Level -->
+                <div class="form-group">
+                  <input type="text" class="form-control" placeholder="Level" />
+                </div>
               </div>
 
             </div>
