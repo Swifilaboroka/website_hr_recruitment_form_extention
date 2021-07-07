@@ -4,7 +4,8 @@ from odoo import models, fields, api
 class ApplicantExtension(models.Model):
     _inherit = 'hr.applicant'
 
-    gender = fields.Char(string="Gender")
+    gender = fields.Selection(string="Gender", selection=[(
+        'male', 'Male'), ('female', 'Female'), ('other', 'Other')])
     photo = fields.Image(string="Profile Photo")
 
     nationality = fields.Char(string="Nationality")
