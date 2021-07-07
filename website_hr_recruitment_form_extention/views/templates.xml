@@ -2,112 +2,150 @@
   <data>
     <template id="hr_applicant_form_extension" inherit_id="website_hr_recruitment.apply">
       <xpath expr="//div[1]" position="replace">
-        <h1 class="text-center mt-2">Job Application Form but fixed</h1>
+        <h1 class="text-center mt-2">Job Application Form</h1>
 
         <h2 t-if="job" class="text-center text-muted">
           <span t-field="job.name" />
         </h2>
 
+        <!--
+    gender = fields.Char(string="Gender")
+    photo = fields.Image(string="Profile Photo")
 
-        <!-- Old form -->
-        <!--  partner_name
-                    email_from
-                    partner_phone
-                    job_id [hidden]
-                    department_id [hidden]
+    nationality = fields.Char(string="Nationality")
+    dateOfBirth = fields.Date(string="Date of Brith")
+    homeAddress = fields.Char(string="Home Address")
+    citizenship = fields.Char(string="Citizenship")
+    maritalStatus = fields.Char(string="Marital Status")
+    languages = fields.Text(string="Languages")
+    additionalCourses = fields.Text(string="Additional Courses")
+    organization = fields.Char(string="Organization")
 
-                    # Extension
-                    gender (Selection)
-                    Nationality
-                    DateOfBirth
-                    HomeAddress
-                    Citizenship
-                    MaritalStatus
-                    languages
-                    additionalCourses
-                    Workplace
-                    Position
-                    StartDate
-                    EndDate
-                    StillWorking
+    hasExperience = fields.Boolean(string="Has work experience?")
+    position = fields.Char(string="Postition")
+    workStart = fields.Date(string="Work start date")
+    workEnd = fields.Date(string="Work end date")
+    stillWorking = fields.Boolean("Still working?")
 
-                    University
-                    StartDate
-                    EndDate
+    university = fields.Char(string="University")
+    specialization = fields.Char(string="Specialization")
+    universityStart = fields.Date(string="University start date")
+    universityEnd = fields.Date(string="University end date")
+    skills = fields.Text(string="Skills")
 
-                    isExperienced
-                    Skills
-                 -->
 
-        <div class="row mt-3">
-          <section id="forms" class="col">
-            <span class="hidden" data-for="hr_recruitment_form" t-att-data-values="{'department_id': job and job.department_id.id or '', 'job_id': job and job.id or ''}" />
-            <form id="hr_recruitment_form" action="/website_form/" method="post" class="s_website_form container" enctype="multipart/form-data" data-model_name="hr.applicant" data-success_page="/job-thank-you" hide-change-model="true">
+        -->
 
-              <div class="col-md-6">
+        <div class="container">
+          <div class="row mt-3">
+            <section id="forms" class="col">
+              <span class="hidden" data-for="hr_recruitment_form" t-att-data-values="{'department_id': job and job.department_id.id or '', 'job_id': job and job.id or ''}" />
+              <form id="hr_recruitment_form" action="/website_form/" method="post" class="s_website_form container" enctype="multipart/form-data" data-model_name="hr.applicant" data-success_page="/job-thank-you" hide-change-model="true">
 
-                <div class="form-group  ">
-                  <label class="col-form-label" for="partner_name">Your Name</label>
-                  <input type="text" class="form-control o_website_form_input" name="partner_name" required="" />
-                </div>
+                <div class="col-md-6">
 
-                <div class="form-group ">
-                  <label class="col-form-label" for="email_from">Your Email</label>
-                  <input type="email" class="form-control o_website_form_input" name="email_from" required="" />
-                </div>
+                  <!-- Photo -->
+                  <div class="form-group row form-field o_website_form_custom">
+                    <label class="col-form-label" for="photo">Photo</label>
+                    <input type="file" class="form-control o_website_form_input" name="photo" />
+                  </div>
 
-                <div class="form-group  ">
-                  <label class="col-form-label" for="partner_phone">Your Phone Number</label>
-                  <input type="text" class="form-control o_website_form_input" name="partner_phone" required="" />
-                </div>
+                  <!-- Name -->
+                  <div class="form-group">
+                    <label class="col-form-label" for="partner_name">Your Name</label>
+                    <input type="text" class="form-control o_website_form_input" name="partner_name" required="" />
+                  </div>
 
-                <!-- <div class="form-group">
+                  <!-- Email -->
+                  <div class="form-group">
+                    <label class="col-form-label" for="email_from">Your Email</label>
+                    <input type="email" class="form-control o_website_form_input" name="email_from" required="" />
+                  </div>
+
+                  <!-- Phone -->
+                  <div class="form-group">
+                    <label class="col-form-label" for="partner_phone">Your Phone Number</label>
+                    <input type="text" class="form-control o_website_form_input" name="partner_phone" required="" />
+                  </div>
+
+                  <!-- Home Address -->
+                  <div class="form-group">
+                    <label class="col-form-label" for="homeAddress">Home Address</label>
+                    <input type="text" class="form-control o_website_form_input" name="homeAddress" required="" />
+                  </div>
+
+                  <!-- Citizenship -->
+                  <div class="form-group">
+                    <label class="col-form-label" for="citizenship">Citizenship</label>
+                    <input type="text" class="form-control o_website_form_input" name="citizenship" required="" />
+                  </div>
+
+                  <!-- Marital status -->
+                  <div class="form-group">
+                    <label class="col-form-label" for="maritalStatus">Marital Status</label>
+                    <input type="text" class="form-control o_website_form_input" name="maritalStatus" required="" />
+                  </div>
+
+                  <!-- Languages -->
+                  <div class="form-group">
+                    <label class="col-form-label" for="languages">Languages</label>
+                    <textarea class="form-control o_website_form_input" name="languages"></textarea>
+                  </div>
+
+                  <!-- <div class="form-group">
                   <label class="col-form-label">Short Introduction</label>
                   <textarea class="form-control o_website_form_input" name="description"></textarea>
                 </div> -->
 
-                <!-- <div class="form-group row form-field o_website_form_custom">
+                  <!-- <div class="form-group row form-field o_website_form_custom">
                   <label class="col-form-label" for="Resume">Resume</label>
                   <input type="file" class="form-control o_website_form_input" name="Resume" />
                 </div> -->
 
-                <div class="form-group row form-field d-none">
-                  <label class="col-form-label" for="job_id">Job</label>
-                  <input type="hidden" class="form-control o_website_form_input" name="job_id" />
+                  <div class="form-group row form-field d-none">
+                    <label class="col-form-label" for="job_id">Job</label>
+                    <input type="hidden" class="form-control o_website_form_input" name="job_id" />
+                  </div>
+
+                  <div class="form-group row form-field d-none">
+                    <label class="col-form-label" for="department_id">Department</label>
+                    <input type="hidden" class="form-control o_website_form_input" name="department_id" />
+                  </div>
+
                 </div>
 
-                <div class="form-group row form-field d-none">
-                  <label class="col-form-label" for="department_id">Department</label>
-                  <input type="hidden" class="form-control o_website_form_input" name="department_id" />
+                <div class="col-md-6">
+
+                  <!-- Nationality -->
+                  <div class="form-group">
+                    <label class="col-form-label" for="nationality">Nationality</label>
+                    <input type="text" class="form-control o_website_form_input" name="nationality" required="" />
+                  </div>
+
+                  <!-- Date of Birth -->
+                  <div class="form-group">
+                    <label class="col-form-label" for="dateOfBirth">Date of Birth</label>
+                    <input type="date" class="form-control o_website_form_input" name="dateOfBirth" required="" />
+                  </div>
+
+                  <!-- Skills -->
+                  <div class="form-group">
+                    <label class="col-form-label" for="skills">Skills</label>
+                    <textarea class="form-control o_website_form_input" name="skills"></textarea>
+                  </div>
                 </div>
 
-              </div>
 
-              <div class="col-md-6">
-
-                <!-- Nationality -->
-                <div class="form-group  ">
-                  <label class="col-form-label" for="nationality">Nationality</label>
-                  <input type="text" class="form-control o_website_form_input" name="nationality" required="" />
+                <div class="form-group row">
+                  <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                    <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Submit</a>
+                    <span id="o_website_form_result"></span>
+                  </div>
                 </div>
 
-                <!-- Skills -->
-                <div class="form-group">
-                  <label class="col-form-label" for="skills">Skills</label>
-                  <textarea class="form-control o_website_form_input" name="skills"></textarea>
-                </div>
-              </div>
-
-
-              <div class="form-group row">
-                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
-                  <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Submit</a>
-                  <span id="o_website_form_result"></span>
-                </div>
-              </div>
-
-            </form>
-          </section>
+              </form>
+            </section>
+          </div>
         </div>
       </xpath>
     </template>
