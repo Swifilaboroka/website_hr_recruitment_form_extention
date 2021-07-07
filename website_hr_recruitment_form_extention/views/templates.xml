@@ -126,6 +126,12 @@
 
                   <!-- Second columns -->
                   <div class="col-md-6">
+                    <h4>Job experience</h4>
+                    <!-- Has work experience -->
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input o_website_form_input" name="hasExperience" />
+                      <label class="col-form-label" for="hasExperience">Has working experience</label>
+                    </div>
 
                     <!-- Organization -->
                     <div class="form-group">
@@ -159,23 +165,48 @@
                       <label class="col-form-label" for="stillWorking">Still working</label>
                     </div>
 
+                    <h4>Education</h4>
+
+                    <!-- University -->
+                    <div class="form-group">
+                      <label class="col-form-label" for="university">University</label>
+                      <input type="text" class="form-control o_website_form_input" name="university" />
+                    </div>
+
+                    <!-- specialization -->
+                    <div class="form-group">
+                      <label class="col-form-label" for="specialization">Specialization</label>
+                      <input type="text" class="form-control o_website_form_input" name="specialization" />
+                    </div>
+
+                    <!-- University start date-->
+                    <div class="form-group">
+                      <label class="col-form-label" for="universityStart">Start date</label>
+                      <input type="date" class="form-control o_website_form_input" name="universityStart" />
+                    </div>
+
+                    <!-- University end date-->
+                    <div class="form-group">
+                      <label class="col-form-label" for="universityEnd">End date</label>
+                      <input type="date" class="form-control o_website_form_input" name="universityEnd" />
+                    </div>
+
 
                     <!-- Skills -->
                     <div class="form-group">
                       <label class="col-form-label" for="skills">Skills</label>
                       <textarea class="form-control o_website_form_input" name="skills"></textarea>
                     </div>
+
+                    <!-- submit button -->
+                    <div class="form-group">
+                      <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Submit</a>
+                      <span id="o_website_form_result"></span>
+                    </div>
                   </div>
-
-
                 </div>
               </div>
-              <div class="form-group row">
-                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
-                  <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Submit</a>
-                  <span id="o_website_form_result"></span>
-                </div>
-              </div>
+
             </form>
 
           </section>
