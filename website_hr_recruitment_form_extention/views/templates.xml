@@ -19,9 +19,9 @@
     maritalStatus = fields.Char(string="Marital Status")
     languages = fields.Text(string="Languages")
     additionalCourses = fields.Text(string="Additional Courses")
-    organization = fields.Char(string="Organization")
 
     hasExperience = fields.Boolean(string="Has work experience?")
+    organization = fields.Char(string="Organization")
     position = fields.Char(string="Postition")
     workStart = fields.Date(string="Work start date")
     workEnd = fields.Date(string="Work end date")
@@ -43,6 +43,7 @@
               <div class="container">
                 <div class="row">
 
+                  <!-- First column -->
                   <div class="col-md-6">
 
                     <!-- Photo -->
@@ -111,16 +112,6 @@
                       <textarea class="form-control o_website_form_input" name="additionalCourses"></textarea>
                     </div>
 
-                    <!-- <div class="form-group">
-                  <label class="col-form-label">Short Introduction</label>
-                  <textarea class="form-control o_website_form_input" name="description"></textarea>
-                </div> -->
-
-                    <!-- <div class="form-group row form-field o_website_form_custom">
-                  <label class="col-form-label" for="Resume">Resume</label>
-                  <input type="file" class="form-control o_website_form_input" name="Resume" />
-                </div> -->
-
                     <div class="form-group row form-field d-none">
                       <label class="col-form-label" for="job_id">Job</label>
                       <input type="hidden" class="form-control o_website_form_input" name="job_id" />
@@ -133,7 +124,41 @@
 
                   </div>
 
+                  <!-- Second columns -->
                   <div class="col-md-6">
+
+                    <!-- Organization -->
+                    <div class="form-group">
+                      <label class="col-form-label" for="organization">Organization</label>
+                      <input type="text" class="form-control o_website_form_input" name="organization" />
+                    </div>
+
+                    <!-- Position -->
+                    <div class="form-group">
+                      <label class="col-form-label" for="position">Organization</label>
+                      <input type="text" class="form-control o_website_form_input" name="position" />
+                    </div>
+
+                    <!-- work start -->
+                    <div class="form-group">
+                      <label class="col-form-label" for="workStart">Start date</label>
+                      <input type="date" class="form-control o_website_form_input" name="workStart" />
+                    </div>
+
+
+                    <!-- work end -->
+                    <div class="form-group">
+                      <label class="col-form-label" for="workEnd">End date</label>
+                      <input type="date" class="form-control o_website_form_input" name="workEnd" />
+                    </div>
+
+
+                    <!-- Still working-->
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input o_website_form_input" name="stillWorking" />
+                      <label class="col-form-label" for="stillWorking">Still working</label>
+                    </div>
+
 
                     <!-- Skills -->
                     <div class="form-group">
@@ -143,16 +168,16 @@
                   </div>
 
 
-                  <div class="form-group row">
-                    <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
-                      <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Submit</a>
-                      <span id="o_website_form_result"></span>
-                    </div>
-                  </div>
-
+                </div>
+              </div>
+              <div class="form-group row">
+                <div class="offset-lg-3 offset-md-4 col-md-8 col-lg-7">
+                  <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Submit</a>
+                  <span id="o_website_form_result"></span>
                 </div>
               </div>
             </form>
+
           </section>
         </div>
       </xpath>
