@@ -1,6 +1,64 @@
 <odoo>
   <data>
+
+    <!-- Modifies Job's list link -->
+
+    <template id="hr_jobs_list_link_update" inherit_id="website_hr_recruitment.index">
+
+      <xpath expr="//div[1]/div[2]/div[1]" position="replace">
+
+        <div class="d-none" id="jobs_grid_left"></div>
+        <div class="col-lg-12" id="jobs_grid">
+          <div t-if="not jobs">
+            <div class="text-center text-muted">
+              <h3 class="css_editable_hidden">
+                <a t-attf-href="/contactus">Contact us</a>
+                for job opportunities.
+              </h3>
+              <h4 groups="hr_recruitment.group_hr_recruitment_manager">
+                Create new job pages from the
+                <strong>
+                  <i>+New</i>
+                </strong>
+                top-right button.
+              </h4>
+            </div>
+          </div>
+          <ul class="list-unstyled" t-if="jobs">
+            <li t-foreach="jobs" t-as="job" t-attf-class="media#{' mt-3' if job_index else ''}">
+              <div class="media-body" t-att-data-publish="job.website_published and 'on' or 'off'">
+                <h3>
+                  <a t-attf-href="/jobs/apply/#{ slug(job) }">
+                    <span t-field="job.name" />
+                  </a>
+                  <small t-if="job.no_of_recruitment &gt; 1">
+                    <t t-esc="job.no_of_recruitment" />
+                    open positions
+                  </small>
+                </h3>
+
+                <span t-field="job.address_id" t-options='{
+                                        "widget": "contact",
+                                        "fields": ["address"],
+                                        "no_tag_br": True
+                                        }' />
+                <span t-if="not job.website_published" class="badge badge-danger">unpublished</span>
+                <div class="text-muted">
+                  <i class="fa fa-clock-o" title="Publication date" role="img" aria-label="Publication date" />
+                  <span t-field="job.write_date" />
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </xpath>
+
+    </template>
+
+    <!-- Extends and re-styles web form -->
     <template id="hr_applicant_form_extension" inherit_id="website_hr_recruitment.apply">
+
+
       <xpath expr="//div[1]" position="replace">
         <h1 class="text-center mt-2">Job Application Form</h1>
 
@@ -9,29 +67,29 @@
         </h2>
 
         <!--
-    gender = fields.Char(string="Gender")
-    photo = fields.Image(string="Profile Photo")
+        gender = fields.Char(string="Gender")
+        photo = fields.Image(string="Profile Photo")
 
-    nationality = fields.Char(string="Nationality")
-    dateOfBirth = fields.Date(string="Date of Brith")
-    homeAddress = fields.Char(string="Home Address")
-    citizenship = fields.Char(string="Citizenship")
-    maritalStatus = fields.Char(string="Marital Status")
-    languages = fields.Text(string="Languages")
-    additionalCourses = fields.Text(string="Additional Courses")
+        nationality = fields.Char(string="Nationality")
+        dateOfBirth = fields.Date(string="Date of Brith")
+        homeAddress = fields.Char(string="Home Address")
+        citizenship = fields.Char(string="Citizenship")
+        maritalStatus = fields.Char(string="Marital Status")
+        languages = fields.Text(string="Languages")
+        additionalCourses = fields.Text(string="Additional Courses")
 
-    hasExperience = fields.Boolean(string="Has work experience?")
-    organization = fields.Char(string="Organization")
-    position = fields.Char(string="Postition")
-    workStart = fields.Date(string="Work start date")
-    workEnd = fields.Date(string="Work end date")
-    stillWorking = fields.Boolean("Still working?")
+        hasExperience = fields.Boolean(string="Has work experience?")
+        organization = fields.Char(string="Organization")
+        position = fields.Char(string="Postition")
+        workStart = fields.Date(string="Work start date")
+        workEnd = fields.Date(string="Work end date")
+        stillWorking = fields.Boolean("Still working?")
 
-    university = fields.Char(string="University")
-    specialization = fields.Char(string="Specialization")
-    universityStart = fields.Date(string="University start date")
-    universityEnd = fields.Date(string="University end date")
-    skills = fields.Text(string="Skills")
+        university = fields.Char(string="University")
+        specialization = fields.Char(string="Specialization")
+        universityStart = fields.Date(string="University start date")
+        universityEnd = fields.Date(string="University end date")
+        skills = fields.Text(string="Skills")
 
 
         -->
