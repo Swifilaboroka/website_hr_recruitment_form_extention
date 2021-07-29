@@ -108,58 +108,59 @@
 
                   <!-- First column -->
                   <div class="col-md-6">
+                    <h4>Personal information</h4>
 
                     <!-- Photo -->
-                    <div class="form-group row form-field o_website_form_custom">
+                    <div class="form-group">
                       <label class="col-form-label" for="photo">Photo</label>
                       <input type="file" class="form-control o_website_form_input" name="photo" />
                     </div>
 
                     <!-- Name -->
                     <div class="form-group">
-                      <label class="col-form-label" for="partner_name">Your Name</label>
+                      <label class="col-form-label" for="partner_name">Your Name *</label>
                       <input type="text" class="form-control o_website_form_input" name="partner_name" required="" />
                     </div>
 
                     <!-- Email -->
                     <div class="form-group">
-                      <label class="col-form-label" for="email_from">Your Email</label>
+                      <label class="col-form-label" for="email_from">Your Email *</label>
                       <input type="email" class="form-control o_website_form_input" name="email_from" required="" />
                     </div>
 
                     <!-- Phone -->
                     <div class="form-group">
-                      <label class="col-form-label" for="partner_phone">Your Phone Number</label>
+                      <label class="col-form-label" for="partner_phone">Your Phone Number *</label>
                       <input type="text" class="form-control o_website_form_input" name="partner_phone" required="" />
                     </div>
 
                     <!-- Nationality -->
                     <div class="form-group">
-                      <label class="col-form-label" for="nationality">Nationality</label>
+                      <label class="col-form-label" for="nationality">Nationality *</label>
                       <input type="text" class="form-control o_website_form_input" name="nationality" required="" />
                     </div>
 
                     <!-- Date of Birth -->
                     <div class="form-group">
-                      <label class="col-form-label" for="dateOfBirth">Date of Birth</label>
+                      <label class="col-form-label" for="dateOfBirth">Date of Birth *</label>
                       <input type="date" class="form-control o_website_form_input" name="dateOfBirth" required="" />
                     </div>
 
                     <!-- Home Address -->
                     <div class="form-group">
-                      <label class="col-form-label" for="homeAddress">Home Address</label>
+                      <label class="col-form-label" for="homeAddress">Home Address *</label>
                       <input type="text" class="form-control o_website_form_input" name="homeAddress" required="" />
                     </div>
 
                     <!-- Citizenship -->
                     <div class="form-group">
-                      <label class="col-form-label" for="citizenship">Citizenship</label>
+                      <label class="col-form-label" for="citizenship">Citizenship *</label>
                       <input type="text" class="form-control o_website_form_input" name="citizenship" required="" />
                     </div>
 
                     <!-- Marital status -->
                     <div class="form-group">
-                      <label class="col-form-label" for="maritalStatus">Marital Status</label>
+                      <label class="col-form-label" for="maritalStatus">Marital Status *</label>
                       <input type="text" class="form-control o_website_form_input" name="maritalStatus" required="" />
                     </div>
 
@@ -190,12 +191,6 @@
                   <!-- Second columns -->
                   <div class="col-md-6">
                     <h4>Job experience</h4>
-                    <!-- Has work experience -->
-                    <div class="form-check">
-                      <input type="checkbox" class="form-check-input o_website_form_input" name="hasExperience" />
-                      <label class="col-form-label" for="hasExperience">Has working experience</label>
-                    </div>
-
                     <!-- Organization -->
                     <div class="form-group">
                       <label class="col-form-label" for="organization">Organization</label>
@@ -204,7 +199,7 @@
 
                     <!-- Position -->
                     <div class="form-group">
-                      <label class="col-form-label" for="position">Organization</label>
+                      <label class="col-form-label" for="position">Position</label>
                       <input type="text" class="form-control o_website_form_input" name="position" />
                     </div>
 
@@ -227,6 +222,13 @@
                       <input type="checkbox" class="form-check-input o_website_form_input" name="stillWorking" />
                       <label class="col-form-label" for="stillWorking">Still working</label>
                     </div>
+
+                    <!-- Has work experience -->
+                    <div class="form-check">
+                      <input type="checkbox" class="form-check-input o_website_form_input" name="hasExperience" />
+                      <label class="col-form-label" for="hasExperience">Has working experience</label>
+                    </div>
+
 
                     <h4>Education</h4>
 
@@ -261,15 +263,15 @@
                       <textarea class="form-control o_website_form_input" name="skills"></textarea>
                     </div>
 
-                    <!-- submit button -->
-                    <div class="form-group">
-                      <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Submit</a>
-                      <span id="o_website_form_result"></span>
-                    </div>
+
                   </div>
                 </div>
               </div>
-
+              <!-- submit button -->
+              <div class="form-group">
+                <a href="#" role="button" class="btn btn-primary btn-lg o_website_form_send">Submit</a>
+                <span id="o_website_form_result"></span>
+              </div>
             </form>
 
           </section>
