@@ -55,6 +55,11 @@
 
     </template> -->
 
+    <!-- Removing `apply now` button from page -->
+    <template id="hr_applicant_detail_view_fix" inherit_id="website_hr_recruitment.detail">
+      <xpath expr="//div[1]/div[3]" position="replace"></xpath>
+    </template>
+
     <!-- Extends and re-styles web form -->
     <template id="hr_applicant_form_extension" inherit_id="website_hr_recruitment.apply">
 
