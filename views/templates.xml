@@ -3,7 +3,7 @@
 
     <!-- Modifies Job's list link -->
 
-    <template id="hr_jobs_list_link_update" inherit_id="website_hr_recruitment.index">
+    <!-- <template id="hr_jobs_list_link_update" inherit_id="website_hr_recruitment.index">
 
       <xpath expr="//div[1]/div[2]/div[1]" position="replace">
 
@@ -53,7 +53,7 @@
         </div>
       </xpath>
 
-    </template>
+    </template> -->
 
     <!-- Extends and re-styles web form -->
     <template id="hr_applicant_form_extension" inherit_id="website_hr_recruitment.apply">
